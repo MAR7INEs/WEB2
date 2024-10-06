@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مقالات اخیر taiwlwind</title>
+    <meta name="description" content="آخرین مقالات مرتبط با GIS و ArcGIS Pro." />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- لینک به فایل CSS جداگانه -->
+</head>
+<body>
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-bold mb-6 text-center">آخرین مقالات</h1>
+            <div class="flex flex-wrap -mx-2">
+                <!-- Article 1 -->
+                <div class="w-full md:w-1/3 px-2 mb-4">
+                    <article class="card bg-white shadow-md rounded-lg overflow-hidden" onclick="animateCard(this)">
+                        <div class="relative">
+                            <img class="w-full h-48 object-cover" src="img/1.jpg" alt="ساخت نقشه کروکی جانمایی در ArcGIS Pro" loading="lazy" />
+                        </div>
+                        <div class="p-4">
+                            <h5 class="card-title text-lg font-semibold mb-2">ساخت نقشه کروکی جانمایی در ArcGIS Pro</h5>
+                            <div class="flex items-center">
+                                <div class="avatar2">
+                                    <img class="rounded-full" src="img/hamidi.jpeg" alt="عکس امیر حمیدی، نویسنده مقاله" />
+                                </div>
+                                <p class="card-author mr-2">امیر حمیدی</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article 2 -->
+                <div class="w-full md:w-1/3 px-2 mb-4">
+                    <article class="card bg-white shadow-md rounded-lg overflow-hidden" onclick="animateCard(this)">
+                        <div class="relative">
+                            <img class="w-full h-48 object-cover" src="img/2.jpg" alt="آموزش تغییر سیستم مختصات فایل های رستری در ArcGIS" loading="lazy" />
+                        </div>
+                        <div class="p-4">
+                            <h5 class="card-title text-lg font-semibold mb-2">آموزش تغییر سیستم مختصات فایل های رستری در ArcGIS</h5>
+                            <div class="flex items-center">
+                                <div class="avatar2">
+                                    <img class="rounded-full" src="img/hamidi.jpeg" alt="عکس امیر حمیدی، نویسنده مقاله" />
+                                </div>
+                                <p class="card-author mr-2">امیر حمیدی</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- Article 3 -->
+                <div class="w-full md:w-1/3 px-2 mb-4">
+                    <article class="card bg-white shadow-md rounded-lg overflow-hidden" onclick="animateCard(this)">
+                        <div class="relative">
+                            <img class="w-full h-48 object-cover" src="img/3.jpg" alt="آموزش ثبت نام در USGS با جزئیات کامل" loading="lazy" />
+                        </div>
+                        <div class="p-4">
+                            <h5 class="card-title text-lg font-semibold mb-2">آموزش ثبت نام در USGS با جزئیات کامل</h5>
+                            <div class="flex items-center">
+                                <div class="avatar2">
+                                    <img class="rounded-full" src="img/hamidi.jpeg" alt="عکس امیر حمیدی، نویسنده مقاله" />
+                                </div>
+                                <p class="card-author mr-2">امیر حمیدی</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function animateCard(card) {
+            card.classList.toggle("is-active");
+        }
+    </script>
+</body>
+</html>

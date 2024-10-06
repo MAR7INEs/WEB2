@@ -1,0 +1,34 @@
+body {
+    direction: rtl;            
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: #f9fafb; /* رنگ پس‌زمینه ملایم */
+}
+
+.avatar2 {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    overflow: hidden; /* اطمینان از اینکه تصویر در داخل دایره قرار می‌گیرد */
+}
+
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* سایه‌ی بیشتر در هنگام هاور */
+}
+
+.card.is-active {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    color: #1f2937; /* رنگ عنوان */
+}
+
+.card-author {
+    color: #4b5563; /* رنگ نام نویسنده */
+}

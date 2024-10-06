@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARTIN BULMA 2</title>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+
+    <style>
+      body {
+        background-color: rgb(57, 145, 181);
+      }
+
+      /* انیمیشن fade-in برای ورود کارت‌ها */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out forwards;
+      }
+
+      /* کلیک زوم کردن*/
+      @keyframes zoomIn {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .click-animation {
+        animation: zoomIn 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Welcome to My Car magazine sitE</h1>
+          <h2 class="subtitle">ARTIN</h2>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <strong>ARTIN Website:</strong>
+        </a>
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="home.html">Home</a>
+          <a class="navbar-item" href="about.html">About</a>
+          <a class="navbar-item" href="magazine.html">Another magazine</a>
+          <a class="navbar-item" href="contact.html">Contact us</a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field has-addons">
+              <div class="control">
+                <input class="input" type="text" placeholder="Search..." />
+              </div>
+              <div class="control">
+                <a class="button is-info"> Click Here </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="section">
+      <div class="container">
+        <h3 class="title is-4">Featured Cards</h3>
+        <div class="columns is-multiline">
+          <!-- Column 1 -->
+          <div class="column is-4">
+            <div class="card fade-in" onclick="animateCard(this)">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="img/1.jpg" alt="Placeholder image" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <h5 class="title is-5">Dodge Viper</h5>
+                <p>Here some information about this car.</p>
+                <a href="#" class="button is-link">Learn More about Dodge</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="column is-4">
+            <div class="card fade-in" onclick="animateCard(this)">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="img/2.jpg" alt="Placeholder image" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <h5 class="title is-5">Audi quattro</h5>
+                <p>Here some information about this car.</p>
+                <a href="#" class="button is-link">Learn More about Audi</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="column is-4">
+            <div class="card fade-in" onclick="animateCard(this)">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="img/3.jpg" alt="Placeholder image" />
+                </figure>
+              </div>
+              <div class="card-content">
+                <h5 class="title is-5">Maclaren spider</h5>
+                <p>Here some information about this car.</p>
+                <a href="#" class="button is-link">Learn More about Maclaren</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Features Section -->
+    <section class="section has-background-light">
+      <div class="container">
+        <h3 class="title is-4">Additional Features About Cars</h3>
+        <div class="columns">
+          <div class="column is-4">
+            <div class="box">
+              <h5 class="title is-5">Feature 1</h5>
+              <p>This feature is great for users because...</p>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="box">
+              <h5 class="title is-5">Feature 2</h5>
+              <p>This feature helps improve...</p>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="box">
+              <h5 class="title is-5">Feature 3</h5>
+              <p>With this feature, users can...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          &copy; 2024 ARTIN | <a href="#">Privacy Policy</a> |
+          <a href="#">https://github.com/MAR7INEs</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      function animateCard(card) {
+        // افزودن کلاس انیمیشن کلیک
+        card.classList.add("click-animation");
+
+        // حذف  انیمیشن بعد از اتمام انیمیشن
+        setTimeout(function () {
+          card.classList.remove("click-animation");
+        }, 500); // مدت زمان انیمیشن
+      }
+    </script>
+    <h1>Have a good timE</h1>
+  </body>
+</html>

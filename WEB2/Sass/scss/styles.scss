@@ -1,0 +1,130 @@
+// متغیرها
+$primary-color: #ffffff;
+$secondary-color: #f8f9fa;
+$text-color: #333;
+$avatar-size: 2.5rem; // معادل 40px
+$transition-speed: 0.2s;
+$card-shadow: rgba(0, 0, 0, 0.1);
+$max-container-width: 1200px;
+
+// mixin ها
+@mixin transition($property) {
+  transition: $property $transition-speed;
+}
+
+// استایل های عمومی
+body {
+  direction: rtl;
+  font-family: 'Vazirmatn', sans-serif;
+  background-color: $secondary-color;
+  color: $text-color;
+}
+
+// کارت ها
+.card {
+  background-color: $primary-color;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px $card-shadow;
+  overflow: hidden;
+  @include transition(transform);
+
+  &.is-active {
+    transform: scale(1.05);
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 100%;
+    height: 12rem; // معادل h-48
+    object-fit: cover;
+  }
+
+  .p-4 {
+    padding: 1rem;
+
+    h5 {
+      font-size: 1.25rem; // معادل text-lg
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .flex {
+      align-items: center;
+
+      .avatar {
+        border-radius: 50%;
+        width: $avatar-size;
+        height: $avatar-size;
+
+        img {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      p {
+        margin-right: 0.5rem; // معادل mr-2
+      }
+    }
+  }
+}
+
+// استایل های بخش
+section {
+  padding: 2rem 0;
+
+  .container {
+    max-width: $max-container-width; // حداکثر عرض برای طراحی
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    h3 {
+      font-size: 1.5rem; // معادل text-xl
+      font-weight: bold;
+      margin-bottom: 1.5rem; // معادل mb-6
+    }
+
+    .flex {
+      flex-wrap: wrap;
+      margin: -0.5rem;
+
+      // تنظیمات برای ستون‌ها
+      div {
+        width: 100%; // عرض کامل در صفحه‌های کوچک
+        padding: 0.5rem;
+
+        @media (min-width: 768px) { // md:w-1/3
+          width: 33.33%;
+        }
+
+        @media (min-width: 576px) { // sm:w-1/2
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+// استایل های فوتر
+footer {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.875rem; // معادل text-sm
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
